@@ -11,6 +11,7 @@ let tipoTarefa = document.getElementById("task-type");
 let searchInputTxt = document.getElementById("search-input-text");
 let searchInputBtn = document.getElementById("search-input-btn");
 let labelTaskTitle = document.getElementById("label-task-title");
+let tituloCriandoTarefa = document.getElementById("create-task-title");
 
 // Criando mensagem de erro
 let errorMsg = document.createElement("span");
@@ -110,7 +111,8 @@ function criaCardTarefa(task) {
           top: 100,
           behavior: "smooth",
         });
-        botaoCriaTarefa.textContent = "Salvar";
+        botaoCriaTarefa.textContent = "Salvar mudanças!";
+        tituloCriandoTarefa.textContent = "Editando sua tarefa";
         editandoId = tasks[i].id;
         console.log(editandoId);
         tituloTarefa.value = tasks[i].titulo;
@@ -292,6 +294,7 @@ criaTarefa.addEventListener("click", (e) => {
         tasks[i].tipo = tipoTarefa.value;
         editandoId = 0;
         criaTarefa.textContent = "Criar tarefa!";
+        tituloCriandoTarefa.textContent = "Crie sua tarefa!";
       }
     }
   }
