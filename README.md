@@ -62,6 +62,10 @@ Este projeto foi desenvolvido com o objetivo de praticar:
 
 ## 📂 Como executar
 
+Abra o link da Demo: https://leozanidev.github.io/todo-list/
+
+OU
+
 1. Clone o repositório:
 
 ```bash
