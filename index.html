@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de afazeres - LeoDev</title>
+
+    <!-- Estilização -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Códigos -->
+    <script src="./script.js" defer></script>
+
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet" />
+
+    <!-- Ícones Font Awesome  -->
+    <script
+      src="https://kit.fontawesome.com/d5540791d0.js"
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="page-header"><h1>Administrador de tarefas</h1></div>
+    <div id="main-container">
+      <div id="cria-tarefa">
+        <h2>Crie sua tarefa</h2>
+        <form id="tarefa">
+          <label id="label-task-title">
+            Título da tarefa
+            <input
+              placeholder="Insira o título da tarefa"
+              type="text"
+              name="task-title"
+              id="task-title"
+              required />
+          </label>
+          <label>
+            Descreva a tarefa
+            <textarea
+              placeholder="Insira uma descrição da sua tarefa"
+              name="task-description"
+              id="task-description"></textarea>
+          </label>
+          <label>
+            Qual o tipo de tarefa?
+            <input
+              placeholder="trabalho, estudos, festa..."
+              type="text"
+              name="task-type"
+              id="task-type" />
+          </label>
+          <button type="submit" id="criar-tarefa">Criar tarefa!</button>
+        </form>
+      </div>
+      <div id="pesquisa-tarefa">
+        <h2>Busque uma tarefa</h2>
+        <div id="search-input">
+          <input
+            id="search-input-text"
+            type="text"
+            placeholder="Digite o nome da tarefa" />
+          <button id="search-input-btn" type="button">
+            <i class="fa-solid fa-magnifying-glass"></i><span>Busca</span>
+          </button>
+        </div>
+        <div id="search-filter">
+          <label>
+            <input type="radio" name="task-status-filter" value="all" checked />
+            Todas
+          </label>
+          <label>
+            <input type="radio" name="task-status-filter" value="done" />
+            Feitas
+          </label>
+          <label>
+            <input type="radio" name="task-status-filter" value="pending" />
+            Pendente
+          </label>
+        </div>
+      </div>
+      <div id="mostra-tarefa">
+        <h2>Lista de tarefas</h2>
+        <div id="listagem"></div>
+      </div>
+    </div>
+  </body>
+</html>

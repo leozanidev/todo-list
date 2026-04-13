@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-title: 900 2rem "Playfair Display", serif;
+  --section-title: 700 1.4rem "Playfair Display", serif;
+  --standard-font: 500 1.1rem "Playfair Display", serif;
+  --description-font: 600 1.3rem "Playfair Display", serif;
+}
+
+body {
+  background-color: #fff;
+}
+
+h2 {
+  font: var(--section-title);
+  margin: 0;
+  padding: 0;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+#page-header {
+  margin: 2rem auto;
+  padding: 1rem;
+  display: flex;
+  width: 50%;
+  border-bottom: 2px solid #000;
+  border-radius: 15px;
+  box-shadow: 0 3px 5px #000;
+}
+
+#page-header h1 {
+  font: var(--main-title);
+}
+
+#page-header h1 {
+  color: #000;
+  margin: 0 auto;
+}
+
+#main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000;
+  border-radius: 20px;
+  padding: 2rem;
+  gap: 2rem;
+  width: 70%;
+  margin: 2rem auto;
+  box-shadow: 0 0 25px #999898;
+}
+
+#main-container > div {
+  display: flex;
+  flex-direction: column;
+  background-color: #fbfbfb;
+  width: 90%;
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+#main-container > div > h2 {
+  font: var(--section-title);
+  color: #000;
+  margin: 1rem auto;
+}
+
+#cria-tarefa form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#cria-tarefa label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #000;
+  font: var(--standard-font);
+}
+
+#cria-tarefa input {
+  border-radius: 8px;
+  border: 1px solid #000;
+  outline: none;
+  padding: 0.4rem;
+}
+
+#cria-tarefa textarea {
+  border: 1px solid #000;
+  border-radius: 8px;
+  height: 3rem;
+  padding: 0.4rem;
+}
+
+#cria-tarefa input:focus,
+#cria-tarefa textarea:focus {
+  background-color: #f2f2f2;
+  box-shadow: 0 0 10px #999;
+}
+
+#cria-tarefa button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  width: 10rem;
+  padding: 0.5rem;
+  border-radius: 20px;
+  margin: 1rem auto;
+  transition: 0.5s;
+  cursor: pointer;
+  font: var(--standard-font);
+}
+
+#cria-tarefa > button:hover {
+  opacity: 0.7;
+  box-shadow: 0 0 15px #616060;
+}
+
+#search-input {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+#search-input input {
+  width: 70%;
+  border-radius: 10px;
+  border: 1px solid #000;
+  outline: none;
+  padding: 0.15rem;
+  font: var(--standard-font);
+}
+
+#search-input input:focus {
+  background-color: #f2f2f2;
+  box-shadow: 0 0 10px #999;
+}
+
+#search-input button {
+  display: flex;
+  border: 1px solid #000;
+  width: 30%;
+  padding: 0.5rem;
+  border-radius: 10px;
+  gap: 0.3rem;
+  align-items: center;
+  justify-content: center;
+  font: var(--standard-font);
+}
+
+#search-input button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 5px #000;
+}
+
+#search-filter {
+  display: flex;
+  gap: 1rem;
+}
+
+#search-filter label {
+  display: flex;
+  color: #000;
+  gap: 0.3rem;
+  align-items: center;
+  font: var(--standard-font);
+}
+
+#search-filter > label:hover {
+  cursor: pointer;
+}
+.task-card {
+  border-radius: 15px;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.pending {
+  transition: 0.5s;
+  border: 5px solid #000081;
+}
+
+.pending .task-status > p {
+  color: #000081;
+}
+
+.done {
+  transition: 0.5s;
+  border: 5px solid #06fd12;
+}
+
+.done .task-status > p {
+  color: #06fd12;
+}
+
+.done .task-title > h2 {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.done .task-description > p {
+  opacity: 0.6;
+}
+
+.task-card p {
+  font: var(--description-font);
+}
+
+.task-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-description {
+  margin: 1rem 0 1.5rem 0;
+}
+
+.task-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.editBtn {
+  background-color: #0707ac;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.delBtn {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.title-and-check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.task-check {
+  margin-top: 8px;
+}
+
+.task-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.error {
+  transition: 0.6s;
+  color: #ff0000 !important;
+}
+
+.error > span {
+  font-size: 0.8rem;
+  margin: 0.3rem 0 0 0.3rem;
+}
+.error > input {
+  transition: 0.6s;
+  border: 2px solid #ff0000 !important;
+}
+
+.error > input::placeholder {
+  transition: 0.6s;
+  color: #ff0000;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .task-details {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .task-status {
+    justify-items: center;
+  }
+
+  .task-actions {
+    flex-direction: column;
+  }
+
+  #search-input > button > span {
+    display: none;
+  }
+}
